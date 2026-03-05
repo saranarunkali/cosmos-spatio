@@ -1,0 +1,5 @@
+Conclusion
+
+Affective-Physics demonstrates how NVIDIA Cosmos Reason can enable robots to interpret human emotional dynamics and respond with appropriate behavioral strategies.
+
+This work highlights the potential of reasoning-driven perception systems to create safer and more natural human-robot interactions.
