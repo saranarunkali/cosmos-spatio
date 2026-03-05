@@ -7,14 +7,11 @@ Executive Summary:
 
   Traditional human–robot interaction systems rely on single-frame emotion detection, an approach that breaks down in dynamic, real-world environments. This project leverages NVIDIA Cosmos to shift human–robot interaction from reactive perception to predictive interaction modeling. By analyzing spatio-temporal human motion dynamics, including acceleration patterns, postural shifts, and violations of personal space, the system infers interaction statesrather than assigning emotion labels. These states enable a robot to autonomously execute conservative and interpretable behaviors such as slowing motion, pausing tasks, or increasing interpersonal distance. The result is safer, more fluid collaboration that preserves psychological safety while maintaining operational efficiency in shared human–robot workspaces.
 
-Problem Statement
+Problem Statement:
 
 Most emotion-aware HRI systems:
-
 Depend on static facial expressions
-
 Ignore body dynamics and context
-
 React only after discomfort becomes explicit
 
 In real environments, emotion is expressed through motion, posture, and spatial behavior over time. Static perception fails precisely when safety and trust matter most.
@@ -29,18 +26,14 @@ By modeling how humans move, hesitate, approach, or retreat over time, robots ca
 Interaction State Taxonomy (What the Robot Predicts)
 
 Instead of “happy / angry / sad”:
-
 Comfort / Engagement
-
 Uncertainty / Confusion
-
 Discomfort / Stress
-
 Escalation Risk (rapid approach, abrupt motion, crowding)
 
 These states are actionable, interpretable, and ethically defensible.
 
-System Overview
+System Overview :
 
 Inputs
 
