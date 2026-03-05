@@ -1,0 +1,84 @@
+System Pipeline
+
+The system consists of five major components.
+
+1. Video Input
+
+A short video clip of human-robot interaction is captured from a camera or provided as a prerecorded demonstration video.
+
+The clip is segmented into 2–4 second windows so temporal cues like posture shifts, acceleration, and facial expressions can be analyzed.
+
+2. Perception Layer
+
+The perception module extracts visual and behavioral signals:
+
+Facial expressions
+
+Body posture
+
+Motion intensity
+
+Distance changes (proxemics)
+
+Interaction context
+
+These signals form the structured input for reasoning.
+
+3. Cosmos Reasoning Engine
+
+The perception signals and video segment are passed to Cosmos Reason 2, which performs video reasoning to infer:
+
+Emotional state
+
+Evidence supporting the prediction
+
+Interaction risk level
+
+Recommended interaction strategy
+
+Example output:
+
+{
+  "emotion": "angry",
+  "confidence": 0.91,
+  "evidence": [
+    "raised voice",
+    "rapid arm gestures",
+    "tense posture"
+  ],
+  "interaction_state": "deescalate",
+  "risk_level": "medium",
+  "recommended_robot_actions": [
+    {"action": "increase_distance", "value_m": 0.5},
+    {"action": "speech_rate", "value": "slow"},
+    {"action": "tone", "value": "calm"}
+  ]
+}
+
+Cosmos Reason is critical because it connects perception signals with contextual understanding, enabling the robot to interpret dynamic human behavior rather than static frames.
+
+4. Interaction Policy Engine
+
+The interaction state produced by Cosmos is mapped to robot behavior policies.
+
+Interaction State	Robot Behavior
+De-escalate	Increase distance, calm voice
+Engage	Friendly greeting, energetic gestures
+Support	Gentle tone, empathetic responses
+Assist	Step-by-step guidance
+
+This policy layer ensures the robot responds appropriately to different emotional contexts.
+
+5. Robot Action Layer
+
+The robot executes behavior adjustments including:
+
+Voice tone modification
+
+Speech pacing
+
+Movement speed
+
+Personal distance adjustments
+
+In the demo, these actions are represented through visual overlays and simulated robot responses.
