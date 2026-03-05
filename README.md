@@ -13,23 +13,23 @@ The robot can respond to different emotional states such as anger, happiness, sa
 This approach enables more natural, safe, and adaptive human-robot collaboration in real-world environments such as retail stores, hospitals, and service centers.
 
 System Architecture
-Camera / Video Input
+Camera / Video Input 
         │
         ▼
 Perception Layer
-(Face, posture, motion signals)
+(Face, posture, motion signals) 
         │
         ▼
 Cosmos Reason 2
-(Video reasoning + emotion inference)
+(Video reasoning + emotion inference) 
         │
         ▼
 Interaction State Generator
-(de-escalate / engage / support / assist)
+(de-escalate / engage / support / assist) 
         │
         ▼
 Robot Policy Engine
-(behavior strategy)
+(behavior strategy) 
         │
         ▼
 Robot Actions
@@ -38,29 +38,29 @@ Visual Pipeline (Simple Flow)
 Human Video
      │
      ▼
-Emotion Signals
+Emotion Signals 
      │
      ▼
-Cosmos Reasoning
+Cosmos Reasoning 
      │
      ▼
-Interaction State
+Interaction State 
      │
      ▼
-Robot Behavior
+Robot Behavior 
 
 Example:
 
-Angry Human
+Angry Human 
      │
      ▼
-Cosmos detects tension + aggressive posture
+Cosmos detects tension + aggressive posture 
      │
      ▼
-Interaction State: De-escalate
+Interaction State: De-escalate 
      │
      ▼
-Robot increases distance and speaks calmly
+Robot increases distance and speaks calmly 
 Demo Output Example
 Emotion detected: Angry
 Confidence: 0.91
@@ -70,3 +70,9 @@ Recommended robot actions
 • Increase distance 0.5 m
 • Slow speech rate
 • Calm voice tone
+
+Role of NVIDIA Cosmos
+
+Cosmos Reason enables the system to perform video-level reasoning over human behavior, connecting perception signals such as facial expression, body posture, and movement dynamics into a coherent interpretation of the human interaction state.
+
+This reasoning capability allows the robot to predict the appropriate behavioral response rather than relying on simple emotion classification.
