@@ -1,0 +1,11 @@
+Future Work
+
+Planned improvements include:
+
+Multimodal reasoning using voice signals
+
+Synthetic interaction data generation with Cosmos world models
+
+Reinforcement learning for adaptive robot policies
+
+Deployment on real service robots
