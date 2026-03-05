@@ -1,1 +1,17 @@
 
+{
+  "emotion": "angry",
+  "confidence": 0.91,
+  "evidence": [
+    "raised voice",
+    "rapid arm gestures",
+    "tense posture"
+  ],
+  "interaction_state": "deescalate",
+  "risk_level": "medium",
+  "recommended_robot_actions": [
+    {"action": "increase_distance", "value_m": 0.5},
+    {"action": "speech_rate", "value": "slow"},
+    {"action": "tone", "value": "calm"}
+  ]
+}
