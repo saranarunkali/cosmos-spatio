@@ -1,148 +1,72 @@
-# cosmos-spatio
-Affective-Physics: Spatio-Temporal Interaction States in Human–Robot Collaboration
-
-Robots should not guess how humans feel. They should predict how humans are likely to react.
-
-Executive Summary:
-
-  Traditional human–robot interaction systems rely on single-frame emotion detection, an approach that breaks down in dynamic, real-world environments. This project leverages NVIDIA Cosmos to shift human–robot interaction from reactive perception to predictive interaction modeling. By analyzing spatio-temporal human motion dynamics, including acceleration patterns, postural shifts, and violations of personal space, the system infers interaction statesrather than assigning emotion labels. These states enable a robot to autonomously execute conservative and interpretable behaviors such as slowing motion, pausing tasks, or increasing interpersonal distance. The result is safer, more fluid collaboration that preserves psychological safety while maintaining operational efficiency in shared human–robot workspaces.
-
-Problem Statement:
-
-Most emotion-aware HRI systems:
-Depend on static facial expressions
-Ignore body dynamics and context
-React only after discomfort becomes explicit
-
-In real environments, emotion is expressed through motion, posture, and spatial behavior over time. Static perception fails precisely when safety and trust matter most.
-
-Core Insight
-
-Emotion is not a label.
-It is a spatio-temporal physical signal.
-
-By modeling how humans move, hesitate, approach, or retreat over time, robots can infer interaction risk early and respond conservatively before unsafe or uncomfortable interactions occur.
-
-Interaction State Taxonomy (What the Robot Predicts)
-
-Instead of “happy / angry / sad”:
-Comfort / Engagement
-Uncertainty / Confusion
-Discomfort / Stress
-Escalation Risk (rapid approach, abrupt motion, crowding)
-
-These states are actionable, interpretable, and ethically defensible.
-
-System Overview :
-
-Inputs
-
-Short video clips of human–robot interaction
-
-Scene context and motion over time
-
-Cosmos World Modeling
-
-Temporal scene understanding
-
-Prediction of near-future physical behavior
-
-Contextual reasoning over motion, posture, and proximity
-
-Inference Layer
-
-Observable cues:
-
-Motion acceleration and jerk
-
-Postural rigidity or relaxation
-
-Lean-in vs lean-away
-
-Distance changes and speed of approach
-
-Hesitation or start–stop behavior
-
-Robot Policy (Simple and Transparent)
-
-Interaction State	Robot Action
-Comfort	Proceed normally
-Confusion	Pause and clarify
-Discomfort	Slow movement, increase distance
-Escalation Risk	Stop, retreat, request human confirmation
-Demonstration Scenarios
-
-Demo 1: Healthcare Assistive Robot
-
-Human approaches rapidly, posture tightens
-
-Cosmos predicts increasing discomfort
-
-Robot slows and increases personal space before contact
-
-Demo 2: Collaborative Manufacturing
-
-Human hesitates and repeatedly reorients
-
-System infers confusion
-
-Robot pauses and signals next step
-
-Demo 3: Service Robot
-
-Smooth approach, stable distance
-
-Engagement inferred
-
-Robot continues task uninterrupted
-
-Why Cosmos Is Essential?
-
-Static perception cannot model emotion as it unfolds.
-Cosmos enables temporal world modeling, context-aware reasoning, and predictive foresight, which are necessary to interpret affective signals embedded in physical behavior.
-
-Evaluation Plan
-
-Technical Metrics
-
-Agreement with human-labeled interaction states
-
-Early-warning time vs baseline (seconds gained)
-
-False stop / unnecessary intervention rate
-
-Behavioral Metrics
-
-Minimum distance maintained during discomfort
-
-Smoothness of robot motion
-
-Reduction in abrupt robot stops
-
-Ethical Guardrails (Explicit and Important)
-
-No identity recognition
-
-No medical or psychological diagnosis
-
-No biometric storage
-
-Interaction states are inferred from observable motion only
-
-Robot behaviors are conservative and reversible
-
-Human agency is preserved at all times
-
-Notebook Structure 
-
-Setup and environment
-
-Baseline static emotion detection
-
-Cosmos temporal reasoning pipeline
-
-Interaction state inference
-
-Robot response policy
-
-Evaluation and failure cases
+Project Title
+
+Affective-Physics: Predictive Emotion-Aware Human–Robot Interaction Using NVIDIA Cosmos
+
+Abstract
+
+Human-robot interaction systems often rely on static frame-level emotion classification, which fails to capture the dynamic nature of real human behavior. This project introduces Affective-Physics, a perception-reasoning pipeline that uses NVIDIA Cosmos Reason to interpret emotional signals from short video sequences and convert them into actionable interaction states.
+
+Instead of simply identifying emotions, the system predicts how a robot should behave in response to human emotional conditions. By analyzing facial expressions, posture dynamics, and movement patterns, the system determines the safest and most appropriate interaction strategy.
+
+The robot can respond to different emotional states such as anger, happiness, sadness, and frustration by adjusting its tone, movement, and interaction distance.
+
+This approach enables more natural, safe, and adaptive human-robot collaboration in real-world environments such as retail stores, hospitals, and service centers.
+
+System Architecture
+Camera / Video Input
+        │
+        ▼
+Perception Layer
+(Face, posture, motion signals)
+        │
+        ▼
+Cosmos Reason 2
+(Video reasoning + emotion inference)
+        │
+        ▼
+Interaction State Generator
+(de-escalate / engage / support / assist)
+        │
+        ▼
+Robot Policy Engine
+(behavior strategy)
+        │
+        ▼
+Robot Actions
+(voice tone, distance, movement, guidance)
+Visual Pipeline (Simple Flow)
+Human Video
+     │
+     ▼
+Emotion Signals
+     │
+     ▼
+Cosmos Reasoning
+     │
+     ▼
+Interaction State
+     │
+     ▼
+Robot Behavior
+
+Example:
+
+Angry Human
+     │
+     ▼
+Cosmos detects tension + aggressive posture
+     │
+     ▼
+Interaction State: De-escalate
+     │
+     ▼
+Robot increases distance and speaks calmly
+Demo Output Example
+Emotion detected: Angry
+Confidence: 0.91
+Risk level: Medium
+
+Recommended robot actions
+• Increase distance 0.5 m
+• Slow speech rate
+• Calm voice tone
