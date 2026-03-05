@@ -1,0 +1,23 @@
+Demo Scenarios
+
+The demo video shows four emotional interaction scenarios:
+
+Angry Interaction
+
+A customer approaches aggressively.
+The robot detects anger and increases personal space while responding calmly.
+
+Happy Interaction
+
+A cheerful user greets the robot.
+The robot mirrors the positive energy and engages enthusiastically.
+
+Sad Interaction
+
+A quiet individual approaches with withdrawn posture.
+The robot responds gently and offers assistance.
+
+Frustrated Interaction
+
+A user struggles repeatedly with a kiosk.
+The robot detects frustration and proactively guides the user.
