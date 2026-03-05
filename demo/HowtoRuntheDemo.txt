@@ -1,0 +1,13 @@
+1. Install dependencies
+pip install -r requirements.txt
+2. Set the API key for Cosmos
+export NVIDIA_API_KEY=your_api_key_here
+3. Run the demo
+python demo/run_demo.py --video demo/input_videos/angry.mp4
+4. Output
+
+The pipeline produces:
+
+Structured JSON reasoning output
+
+Annotated video showing the detected interaction state
